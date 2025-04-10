@@ -1,0 +1,49 @@
+
+					<!--RISD CATALOG SEARCH-->
+					<div id="catalog" class="tab-pane active">
+						<div class="searchbox">
+							<input type="text" id="libSearchBox" name="librarySearchBox" value="" class="form-control" placeholder="Search local collections (RISD books, DVDs, ebooks, and the Athenaeum)" autofocus>
+							<button class="btn search" id="libSearch">
+								<svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512" class="icon-search"><path d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z"/></svg>
+								<span>Search</span>
+							</button>
+						</div>
+						<div class="options" id="searchCRIT">
+							<input name="searchCRIT" type="radio" value="X" checked="checked" id="keyword">
+							<label for="keyword">Keyword</label>
+							<input name="searchCRIT" type="radio" value="t" id="title">
+							<label for="title">Title</label>
+							<input name="searchCRIT" type="radio" value="a" id="author">
+							<label for="author">Author</label>
+							<input name="searchCRIT" type="radio" value="d" id="subject">
+							<label for="subject">Subject</label>
+							<input name="searchCRIT" type="radio" value="c" id="call">
+							<label for="call">Call Number</label>
+						</div>
+					</div>
+					<!--FLEET SEARCH-->
+					<div id="fleet" class="tab-pane">        
+						<!--Fleet search box-->
+						<form id="EDSsearchbox" action="https://0-research-ebsco-com.librarycat.risd.edu/c/ing2w3/results" method="GET" target="_blank">
+							<input type="hidden" name="autocorrect" value="y"/>
+							<div class="searchbox">
+								<input class="form-control" type="search" name="q" placeholder="Search print and electronic collections (articles, books, ebooks, etc)" aria-label="Search print and electronic collections (articles, books, ebooks, etc)"/>
+								<button type="submit" aria-label="Search" value="search" class="btn search">
+									<svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512" class="icon-search"><path d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z"/></svg>
+									<span>Search</span>
+								</button>
+							</div>
+							<!--search type options-->
+							<div id="guidedFieldSelectors" class="options">
+								<input type="radio" id="type-keyword" name="search-type" value="keyword" checked="checked" />
+								<label for="type-keyword">Keyword</label>
+								
+								<input type="radio" id="type-author" name="search-type" value="author" />
+								<label for="type-author">Author</label>
+								
+								<input type="radio" id="type-title" name="search-type" value="title" />
+								<label for="type-title">Title</label>
+							</div>
+						</form>
+					</div>
+					<!--end FLEET SEARCH-->
